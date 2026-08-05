@@ -1,0 +1,9 @@
+# Replace with your real domain, e.g. chinabridge.com
+# Caddy automatically obtains and renews a free HTTPS certificate.
+yourdomain.com {
+	reverse_proxy app:3000
+}
+
+www.yourdomain.com {
+	redir https://yourdomain.com{uri} permanent
+}
